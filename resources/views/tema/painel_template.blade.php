@@ -43,7 +43,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="{{route('painel')}}">
+        <a class="nav-link" href="">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>PAINEL DE CONTROLE</span>
         </a>
@@ -101,7 +101,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::user()->name}} </span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">@if(isset(Auth::user()->name)){{Auth::user()->name}}@endif </span>
                 <!--img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60"-->
               </a>
               <!-- Dropdown - User Information -->
