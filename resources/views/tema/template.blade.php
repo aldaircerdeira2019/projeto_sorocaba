@@ -47,17 +47,17 @@
                 <p style="text-align: left;font: Bold 23px/36px Montserrat;letter-spacing: 0.68px;color: #FFFFFF;text-transform: uppercase;opacity: 1; height: 30px;margin-top: 35px">
                     nome 
                 </p>
+                
             </div>
-
+           
           </ul>
+       
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
-            
-
             <!-- Nav Item - User Information -->
-            @if(isset(Auth::user()->name))
-                <li class="nav-item dropdown no-arrow">
-                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown no-arrow">
+              @if(isset(Auth::user()->name))
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::user()->name}}</span>
                     <img class="img-profile rounded-circle" src="{{asset('assets/img/avatar.png')}}">
                 </a>
@@ -70,8 +70,8 @@
                     Sair
                     </a>
                 </div>
-                </li>
-            @endif
+                @endif
+              </li>
           </ul>
 
         </nav>
