@@ -1,7 +1,7 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
+@extends('tema.template')
+    
+@section('home')
+<div class="container" style="height: 600px;">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

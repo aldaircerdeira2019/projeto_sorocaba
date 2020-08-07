@@ -23,7 +23,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" >
 
   <!-- Page Wrapper -->
   <div id="wrapper" >
@@ -37,27 +37,26 @@
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="background: #363636 0% 0% no-repeat padding-box;height: 109px;opacity: 1;">
 
-          <ul class="navbar-nav" style="margin: 0 40% 0 40%">
-            <div style="height: 109px; width: 400px;">
+          <ul class="navbar-nav" style="widows: 400px;margin-left: 40%;">
+            <div style="height: 109px;">
                 <a style="height: 100%; float:left" >
                 <div style="max-width: 200px" >
                     <img src="{{ asset('assets/img/Imagem_3.png')}}" width="100%">
                 </div>
                 </a>
-                <p style="text-align: left;font: Bold 23px/36px Montserrat;letter-spacing: 0.68px;color: #FFFFFF;text-transform: uppercase;opacity: 1; height: 30px;margin-top: 35px">
+                <p style="text-align: left;font: Bold 23px/36px Montserrat;letter-spacing: 0.68px;color: #FFFFFF;text-transform: uppercase;opacity: 1; height: 30px;float: right; margin: 30px;">
                     nome 
                 </p>
-                
-            </div>
-           
-          </ul>
+              </div>
+            </ul>
        
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
+            
               @if(isset(Auth::user()->name))
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::user()->name}}</span>
                     <img class="img-profile rounded-circle" src="{{asset('assets/img/avatar.png')}}">
                 </a>
@@ -70,10 +69,15 @@
                     Sair
                     </a>
                 </div>
+                @else
+                  
+                  <a class="btn" href="{{route('login')}}">Entrar</a>
+                  <a  class="btn" href="{{route('register')}}">registrar</a>
                 @endif
+                
               </li>
           </ul>
-
+         
         </nav>
         <!-- End of Topbar -->
 
