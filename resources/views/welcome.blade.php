@@ -1,7 +1,6 @@
 @extends('tema.template')
-    
 @section('home')
-    
+
     <div style="top: 0px;
     left: 0px;
     margin-top: -25px;
@@ -9,7 +8,9 @@
     height: 1080px;
     background: transparent url('{{ asset('assets/img/Imagem 2.png')}}') 0% 0% no-repeat padding-box;
     opacity: 0.85;">
-    
+        @can('admin')
+            <a class="btn btn-primary" href="{{route('admin.index')}}">Area Administrativa</a>
+        @endcan
         <div style="top: 0px;
         margin: 0 30% 0 30%;
         width: 586px;

@@ -53,6 +53,7 @@
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
             <!-- Nav Item - User Information -->
+           
             <li class="nav-item dropdown no-arrow">
             
               @if(isset(Auth::user()->name))
@@ -107,7 +108,7 @@
               <script src={{ asset('assets/startbootstrap/js/demo/chart-area-demo.js') }}></script>
               <script src={{ asset('assets/startbootstrap/js/demo/chart-pie-demo.js') }}></script>
             
-          
+            @include('flash::message')  
             @yield('home')
 
           <!-------------------------------------->

@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-    Route::get('/', 'HomeController@welcome');
+    Route::get('/', 'HomeController@welcome')->name('home-page');
     Route::group(['middleware' => ['auth']], function () {
         Route::group(['prefix' => 'painel'], function () {
             Route::resource('admin', 'Painel\Admin\adminController');

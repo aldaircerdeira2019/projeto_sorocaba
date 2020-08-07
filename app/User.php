@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Model\permission;
 
 class User extends Authenticatable
 {
@@ -55,7 +56,7 @@ class User extends Authenticatable
         return $this->rules->contains('name', $roles);
     }
 
-    public function hasPermission(Permission $permission)
+    public function hasPermission(permission $permission)
     { 
         // dd( $this->hasAnyRules($permission->rules));
         return $this->hasAnyRules($permission->roles);

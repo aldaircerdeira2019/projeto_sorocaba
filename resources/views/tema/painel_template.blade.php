@@ -31,11 +31,11 @@
     <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('home-page')}}">
         <div class="sidebar-brand-icon rotate-n-15">
           <img src="{{ asset('assets/img/logo_vergroup.png')}}">
         </div>
-        <div class="sidebar-brand-text mx-3"><img src="{{ asset('assets/img/nome_vergroup.png')}}" width=100%></div>
+
       </a>
 
       <!-- Divider -->
@@ -147,6 +147,7 @@
               <script src={{ asset('assets/startbootstrap/js/demo/chart-pie-demo.js') }}></script>
               
           <!-----  conteudo  ------->
+            @include('flash::message')  
             @yield('painel-admin')
 
           <!-------------------------------------->
