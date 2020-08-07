@@ -15,6 +15,7 @@ class CreateLayoutsTable extends Migration
     {
         Schema::create('layouts', function (Blueprint $table) {
             $table->id();
+            $table->string('background');
             $table->string('nome_jogo', 60);
             $table->text('texto_destaque');
             $table->string('frase',160);

@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
     Route::group(['middleware' => ['auth']], function () {
         Route::group(['prefix' => 'painel'], function () {
             Route::resource('admin', 'Painel\Admin\adminController');
+            Route::resource('layout', 'Painel\Admin\layoutController');
         });
     });
 

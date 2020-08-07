@@ -68,6 +68,7 @@
           <div id="collapseAdmin" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Admin:</h6>
+              <a class="collapse-item" href="{{route('layout.edit',1)}}">layout</a>
             
             </div>
           </div>
