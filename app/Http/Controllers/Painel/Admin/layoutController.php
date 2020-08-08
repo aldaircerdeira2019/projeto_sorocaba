@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Painel\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\layout;
+use App\Http\Requests\Requests\LayoutRequest;
 
 class layoutController extends Controller
 {
@@ -27,8 +28,10 @@ class layoutController extends Controller
         }
      }
 
-     public function update($id)
+     public function update(LayoutRequest $request, $id)
      {
-         return 'sfs';
+        $dados = $request->all();
+        dd($dados);
+        
      }
 }

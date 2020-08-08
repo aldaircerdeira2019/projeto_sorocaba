@@ -4,7 +4,7 @@
 <div class="container" style="height: 600px;">
     <div class="card shadow mb-4">
         <div class="card-body">
-            <form  method="post" action="{{route('layout.update',$layout->id)}}"><!---->
+            <form  method="post" action="{{route('layout.update',$layout->id)}}"  enctype="multipart/form-data" ><!---->
                 <h4><b>Edição do layout</b></h4><br>
                 @csrf
                 @method('PUT')
@@ -24,7 +24,7 @@
                     <label for="texto_destaque" class="col-sm-4 col-form-label">Texto destaque do tema</label>
                     <div class="col-sm-4">
                         <textarea name="texto_destaque" type="text"  class="form-control @error('texto_destaque') is-invalid @enderror" id="texto_destaque" maxlength="400">
-                             {{old('texto_destaque', $layout->texto_destaque)}}"
+                             {{old('texto_destaque', $layout->texto_destaque)}}
                         </textarea>
                         @error('texto_destaque')
                             <span class="invalid-feedback" role="alert">
@@ -48,7 +48,7 @@
                     <label for="descri_form" class="col-sm-4 col-form-label">Frase do Formulario de contato</label>
                     <div class="col-sm-4">
                         <textarea name="descri_form" type="text"  class="form-control @error('descri_form') is-invalid @enderror" id="descri_form" maxlength="400">
-                             {{old('descri_form', $layout->descri_form)}}"
+                             {{old('descri_form', $layout->descri_form)}}
                         </textarea>
                         @error('descri_form')
                             <span class="invalid-feedback" role="alert">
@@ -60,7 +60,7 @@
                 <div class="form-group row">
                     <label for="background" class="col-sm-4 col-form-label">Background do Tema</label>
                     <div class="col-sm-4">
-                        <input name="background" type="file" accept=".jpg, .jpeg, .png .gif" class="form-control-file @error('background') is-invalid @enderror" id="background" value="{{old('background', $layout->background)}}" >
+                        <input name="background" type="file" accept=".jpg, .jpeg, .png" class="form-control-file @error('background') is-invalid @enderror" id="background" value="{{old('background', $layout->background)}}" >
                         @error('background')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
