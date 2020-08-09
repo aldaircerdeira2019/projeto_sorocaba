@@ -32,8 +32,8 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('home-page')}}">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <img src="{{ asset('assets/img/logo_vergroup.png')}}">
+        <div class="sidebar-brand-icon">
+          <p> home</p>
         </div>
 
       </a>
@@ -69,7 +69,8 @@
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Admin:</h6>
               <a class="collapse-item" href="{{route('layout.edit',1)}}">layout</a>
-            
+              <a class="collapse-item" href="{{route('mensagem.index')}}">Mensagens</a>
+              
             </div>
           </div>
         </li>

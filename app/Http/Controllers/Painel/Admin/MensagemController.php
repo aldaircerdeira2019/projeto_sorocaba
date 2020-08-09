@@ -14,6 +14,19 @@ class MensagemController extends Controller
     {
         $this->mensagem = $mensagem;
     }
+    public function index(){
+        try 
+        {
+            $this->authorize('admin');
+            $mensagens = $this->mensagem->paginate(10);
+            return view('painel.mensagem.index', compact('mensagens'));
+        }catch (\Exception $e) 
+        {
+        flash('Não autorizado!')->error();
+        return redirect()->back();
+
+        }
+    }
     public function store(MesagemRequest $request)
     {
         try 
@@ -27,5 +40,15 @@ class MensagemController extends Controller
         flash('erro!')->error();
         return redirect()->back();
         }
+    }
+    public function show($id)
+    {
+        $mensagem = $this->mensagem->find($id);
+        $dados_json = [
+            'mensagem' => $mensagem,
+        ];
+        return $dados_json;
+
+    
     }
 }
