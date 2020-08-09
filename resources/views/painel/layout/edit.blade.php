@@ -1,7 +1,7 @@
 @extends('tema.painel_template')
 
 @section('painel-admin')
-<div class="container" style="height: 600px;">
+<div class="container">
     <div class="card shadow mb-4">
         <div class="card-body">
             <form  method="post" action="{{route('layout.update',$layout->id)}}"  enctype="multipart/form-data" ><!---->
@@ -23,7 +23,7 @@
                 <div class="form-group row">
                     <label for="texto_destaque" class="col-sm-4 col-form-label">Texto destaque do tema</label>
                     <div class="col-sm-4">
-                        <textarea name="texto_destaque" type="text"  class="form-control @error('texto_destaque') is-invalid @enderror" id="texto_destaque" maxlength="400">
+                        <textarea name="texto_destaque" type="text"  class="form-control @error('texto_destaque') is-invalid @enderror" id="texto_destaque" maxlength="400" style="height: 300px;">
                              {{old('texto_destaque', $layout->texto_destaque)}}
                         </textarea>
                         @error('texto_destaque')
@@ -47,7 +47,7 @@
                 <div class="form-group row">
                     <label for="descri_form" class="col-sm-4 col-form-label">Frase do Formulario de contato</label>
                     <div class="col-sm-4">
-                        <textarea name="descri_form" type="text"  class="form-control @error('descri_form') is-invalid @enderror" id="descri_form" maxlength="400">
+                        <textarea name="descri_form" type="text"  class="form-control @error('descri_form') is-invalid @enderror" id="descri_form" maxlength="400" style="height: 300px;">
                              {{old('descri_form', $layout->descri_form)}}
                         </textarea>
                         @error('descri_form')
@@ -58,7 +58,13 @@
                     </div>
                 </div>
                 <img >
-                <img src="{{asset($layout->background)}}" width="300px;">
+                <div class="form-group row">
+                    <div class="col-sm-8">
+                        @if(isset($layout->background))
+                            <img src="{{asset($layout->background)}}"style="width: 300px;float:right">
+                        @endif
+                    </div>
+                </div>
                 <div class="form-group row">
                     <label for="background" class="col-sm-4 col-form-label">Background do Tema</label>
                     <div class="col-sm-4">

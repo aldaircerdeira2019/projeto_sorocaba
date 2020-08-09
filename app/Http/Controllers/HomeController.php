@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Model\layout;
 
 class HomeController extends Controller
 {
@@ -29,6 +30,7 @@ class HomeController extends Controller
 
     public function welcome()
     {
-        return view('welcome');
+        $layout = layout::find(1);
+        return view('welcome', compact('layout'));
     }
 }

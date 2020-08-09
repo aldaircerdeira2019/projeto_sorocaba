@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Painel\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Model\layout;
 
 class adminController extends Controller
 {
@@ -12,7 +13,8 @@ class adminController extends Controller
         try 
         {
             $this->authorize('admin');
-            return view('painel.index');
+            $layout = layout::find(1);
+            return view('painel.index', compact('layout'));
         }catch (\Exception $e) 
         {
         flash('Não autorizado!')->error();

@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>{{$title ?? 'adasda'}}</title>
+  <title>{{$layout->nome_jogo ?? 'meu site'}}</title>
 
   <!-- Custom fonts for this template-->
   <link href="{{ asset('assets/startbootstrap/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">

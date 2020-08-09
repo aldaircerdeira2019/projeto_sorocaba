@@ -37,8 +37,6 @@ class layoutController extends Controller
         $pagar_image_anterior = File::delete($layout->background);
         $update =   $layout->update($dados);
         flash('atualizado com sucesso!')->success();
-        return redirect()->back();   
-        
-        
+        return redirect()->back();     
      }
 }

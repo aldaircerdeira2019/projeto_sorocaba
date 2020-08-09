@@ -45,7 +45,9 @@
                 </div>
                 </a>
                 <p style="text-align: left;font: Bold 23px/36px Montserrat;letter-spacing: 0.68px;color: #FFFFFF;text-transform: uppercase;opacity: 1; height: 30px;float: right; margin: 30px;">
-                    nome 
+                  @if(isset($layout->nome_jogo))  
+                    {{$layout->nome_jogo}}
+                  @endif
                 </p>
               </div>
             </ul>
@@ -58,8 +60,7 @@
             
               @if(isset(Auth::user()->name))
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::user()->name}}</span>
-                    <img class="img-profile rounded-circle" src="{{asset('assets/img/avatar.png')}}">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::user()->name}} </span>
                 </a>
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
