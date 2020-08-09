@@ -57,6 +57,8 @@
                         @enderror 
                     </div>
                 </div>
+                <img >
+                <img src="{{asset($layout->background)}}" width="300px;">
                 <div class="form-group row">
                     <label for="background" class="col-sm-4 col-form-label">Background do Tema</label>
                     <div class="col-sm-4">
@@ -69,7 +71,6 @@
                     </div>
                 </div>
     
-           
                 <button type="submit" class="btn btn-primary">salvar</button>
          
             </form>

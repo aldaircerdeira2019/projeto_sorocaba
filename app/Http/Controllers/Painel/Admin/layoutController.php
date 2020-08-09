@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\layout;
 use App\Http\Requests\Requests\LayoutRequest;
+use Illuminate\Support\Facades\Storage;
+use File;
 
 class layoutController extends Controller
 {
@@ -31,7 +33,12 @@ class layoutController extends Controller
      public function update(LayoutRequest $request, $id)
      {
         $dados = $request->all();
-        dd($dados);
+        $layout = $this->layout->find($id);
+        $pagar_image_anterior = File::delete($layout->background);
+        $update =   $layout->update($dados);
+        flash('atualizado com sucesso!')->success();
+        return redirect()->back();   
+        
         
      }
 }

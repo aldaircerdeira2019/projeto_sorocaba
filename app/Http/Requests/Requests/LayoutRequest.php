@@ -29,14 +29,14 @@ class LayoutRequest extends FormRequest
             'texto_destaque' => 'required|min:30',
             'frase' => 'required|min:30',
             'descri_form' => 'required|min:60',
-            'background' => 'required|image|mimes:jpg,jpeg,png|max:2080'
+            'background' => 'image|mimes:jpg,jpeg,png|max:2080'
        
         ];
     }
     public function messages()
     {
         return [
-            'background.required' => 'Para prosseguir é necessario carregar uma imagem',
+           //'background.required' => 'Para prosseguir é necessario carregar uma imagem',
         ];
     }
 }
