@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
     Route::get('/', 'HomeController@welcome')->name('home-page');
-    Route::group(['middleware' => ['auth']], function () {
-        Route::group(['prefix' => 'painel'], function () {
+    Route::group(['prefix' => 'painel'], function () {
+        Route::resource('mensagem', 'Painel\Admin\MensagemController');
+        Route::group(['middleware' => ['auth']], function () {
             Route::resource('admin', 'Painel\Admin\adminController');
             Route::resource('layout', 'Painel\Admin\layoutController');
         });

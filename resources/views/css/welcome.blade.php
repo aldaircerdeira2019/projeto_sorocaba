@@ -47,14 +47,12 @@
     #bloco03{
         left: 0px;
         width: 1920px;
-        height: 700px;
         background: transparent linear-gradient(143deg, #7DEDE2 0%, #58B790 100%) 0% 0% no-repeat padding-box;
         opacity: 1;
     }
     #form{
         margin: 0 20% 0 20%;
         width: 700px;
-        height: 700px;
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 0px 6px #0000004D;
         opacity: 1;
