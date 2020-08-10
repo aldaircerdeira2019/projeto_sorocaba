@@ -57,7 +57,6 @@
                         @enderror 
                     </div>
                 </div>
-                <img >
                 <div class="form-group row">
                     <div class="col-sm-8">
                         @if(isset($layout->background))

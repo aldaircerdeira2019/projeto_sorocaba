@@ -70,6 +70,7 @@
               <h6 class="collapse-header">Admin:</h6>
               <a class="collapse-item" href="{{route('layout.edit',1)}}">layout</a>
               <a class="collapse-item" href="{{route('mensagem.index')}}">Mensagens</a>
+              <a class="collapse-item" href="{{route('personagem.index')}}">Personagens</a>
               
             </div>
           </div>

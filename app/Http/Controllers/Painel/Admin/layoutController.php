@@ -19,8 +19,8 @@ class layoutController extends Controller
      public function edit($id){
         try 
         {
-            $layout = $this->layout->find($id);
             $this->authorize('admin');
+            $layout = $this->layout->find($id);
             return view('painel.layout.edit', compact('layout'));
         }catch (\Exception $e) 
         {
@@ -32,11 +32,19 @@ class layoutController extends Controller
 
      public function update(LayoutRequest $request, $id)
      {
-        $dados = $request->all();
-        $layout = $this->layout->find($id);
-        $pagar_image_anterior = File::delete($layout->background);
-        $update =   $layout->update($dados);
-        flash('atualizado com sucesso!')->success();
-        return redirect()->back();     
+        try 
+        {
+            $this->authorize('admin');
+            $dados = $request->all();
+            $layout = $this->layout->find($id);
+            $pagar_image_anterior = File::delete($layout->background);
+            $update =   $layout->update($dados);
+            flash('atualizado com sucesso!')->success();
+            return redirect()->back();     
+        }catch (\Exception $e) 
+        {
+        flash('Não autorizado!')->error();
+        return redirect()->back();
+        }
      }
 }
