@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\layout;
+use App\Model\personagen;
 
 class HomeController extends Controller
 {
@@ -31,6 +32,7 @@ class HomeController extends Controller
     public function welcome()
     {
         $layout = layout::find(1);
-        return view('welcome', compact('layout'));
+        $personagens = personagen::all();
+        return view('welcome', compact('layout','personagens'));
     }
 }

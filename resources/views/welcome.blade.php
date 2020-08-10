@@ -12,6 +12,20 @@
     </div>
     
     <div id="bloco02">
+
+        <div id='personagem'> 
+            @foreach ($personagens as $personagem)
+         
+                <div id="modura">
+                    <div id="quadro_img">
+                        <img id="img-personagem" src="{{asset($personagem->avatar)}}">
+                    </div>
+                    <div id="text-descri">
+                    <p>{{$personagem->descri_personagem}}</p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
     </div>
 
     <div id="bloco03">

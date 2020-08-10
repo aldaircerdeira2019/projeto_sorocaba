@@ -37,10 +37,9 @@
         opacity: 1;
     }
     #bloco02{
-        top: 1080px;
+      
         left: 0px;
         width: 1920px;
-        height: 1147px;
         background: #363636 0% 0% no-repeat padding-box;
         opacity: 1;
     }
@@ -72,5 +71,27 @@
         letter-spacing: 0px;
         color: #363636;
         opacity: 1;
+    }
+    #personagem
+    {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 10px;
+    }
+    #modura{
+        width: 350px;
+        background-color: #F0F0F2;
+        box-shadow: 0px 0px  5px rgba(0, 0, 0,0.5);
+        padding: 0 30px 30px 10px;
+    }
+    #quadro_img{
+        width: 100%;
+    }
+    #text-descri{
+        text-align:justify;
+        margin: 5px 10px 5px 10px;
     }
 </style>
